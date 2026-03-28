@@ -1,0 +1,13 @@
+name: cd.yaml
+on:
+  push:
+    branches:
+      - main
+jobs:
+  getCode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v6
+      - name: build front
+        run: cd frontend | npm i | npm run build
