@@ -7,7 +7,17 @@ jobs:
   getCode:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v6
-      - name: build front
-        run: cd frontend | npm i | npm run build
+      - name: Deploy
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/weather
+            git pull
+            if git diff HEAD~1 --name-only | grep -q "^frontend/"; then                                                                                    
+              bash build-all.sh
+            fi 
+            pm2 restart all
+            pm2 save
