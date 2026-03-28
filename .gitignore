@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+.idea/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/.next-*/
+frontend/out/
+frontend/.env.local
+frontend/.env.production
+
+# Backend (Laravel)
+backend/vendor/
+backend/.env
+backend/storage/logs/
+backend/storage/framework/cache/
+backend/storage/framework/sessions/
+backend/storage/framework/views/
+backend/public/storage
+backend/public/hot
+backend/public/build
+
+# Parser
+parser/.env
+parser/venv/
+parser/__pycache__/
+parser/*.pyc
