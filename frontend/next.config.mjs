@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/api/weather/:path*',
-        destination: 'http://localhost:8000/api/weather/:path*',
+        destination: 'http://localhost:5000/api/weather/:path*',
       },
     ];
   },
