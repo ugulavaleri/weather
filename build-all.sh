@@ -1,4 +1,5 @@
-cd ~/Desktop/weather/frontend
+#cd ~/Desktop/weather/frontend - for mac
+cd /var/www/weather/frontend
 
   COUNTRIES=("KG" "AZ" "TR" "KZ" "UZ" "TM" "TJ")
 
